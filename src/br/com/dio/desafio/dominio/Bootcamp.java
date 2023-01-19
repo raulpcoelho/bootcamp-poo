@@ -25,6 +25,8 @@ public class Bootcamp {
     public Bootcamp(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
+        this.devsInscritos = new HashSet<>();
+        this.conteudos = new LinkedHashSet<>();
     }
 
 
@@ -69,5 +71,8 @@ public class Bootcamp {
         this.conteudos = conteudos;
     }
 
+    public void adicionarConteudo(Conteudo conteudo) {
+        this.conteudos.add(conteudo);
+    }
     
 }
