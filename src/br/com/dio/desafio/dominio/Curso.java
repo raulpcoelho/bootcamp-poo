@@ -33,4 +33,39 @@ public class Curso extends Conteudo {
                 + this.cargaHoraria + "}";
     }
 
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = super.hashCode();
+        result = prime * result + cargaHoraria;
+        return result;
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (!super.equals(obj))
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Curso other = (Curso) obj;
+        if (super.getTitulo() == null) {
+            if (other.getTitulo() != null)
+                return false;
+        } else if (!super.getTitulo().equals(other.getTitulo()))
+            return false;
+        if (super.getDescricao() == null) {
+            if (other.getDescricao() != null)
+                return false;
+        } else if (!super.getDescricao().equals(other.getDescricao()))
+            return false;
+        if (this.cargaHoraria != other.cargaHoraria)
+            return false;
+        return true;
+    }
+
+    
+
 }

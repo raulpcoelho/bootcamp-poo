@@ -35,4 +35,14 @@ public abstract class Conteudo {
         this.descricao = descricao;
     }
 
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((titulo == null) ? 0 : titulo.hashCode());
+        result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
+        return result;
+    }
+
+    
 }
